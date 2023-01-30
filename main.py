@@ -1,10 +1,11 @@
 import os
+import sys
 
 # Link to the folder that you want to rename
-folder = r'D:\folder\\'
+folder = r'' + sys.argv[1] + '//'
 
 # Count increase by 1 in each iteration
-count = 1
+count = sys.argv[2] if sys.argv[2] != '' else 1
 
 # iterate all files from a directory
 for file_name in os.listdir(folder):
@@ -13,6 +14,9 @@ for file_name in os.listdir(folder):
 
     # Adding the count to the new file name and extension
     destination = folder +  str(count) + ".jpg"
+    # if you have the trouble duplicate name
+    # please change detination = folder +  str(count) + "xxx.jpg"
+    # and start again
 
     # Renaming the file
     os.rename(source, destination)
@@ -23,3 +27,5 @@ print('New Names are')
 # verify the result
 res = os.listdir(folder)
 print(res)
+
+print(folder)
