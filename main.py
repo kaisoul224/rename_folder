@@ -5,7 +5,7 @@ import sys
 folder = r'' + sys.argv[1] + '//'
 
 # Count increase by 1 in each iteration
-count = sys.argv[2] if sys.argv[2] != '' else 1
+count = int(sys.argv[2]) if sys.argv[2] != '' else 1
 
 # iterate all files from a directory
 for file_name in os.listdir(folder):
@@ -28,4 +28,3 @@ print('New Names are')
 res = os.listdir(folder)
 print(res)
 
-print(folder)
