@@ -12,8 +12,4 @@ python main.py --PATH_TO_FOLDER --START_COUNT
 ```bash
 python main.py D:\images 1
 ```
-### OR
-```bash
-python main.py D:\images
-```
 
